@@ -1,20 +1,28 @@
 package lesson05;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+// import java.util.*;
 
-public class InputData {
-    public static void main(String[] args) {
+import java.io.*;
+public class InputData{
+    public static void main(String[] args){
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String s;
-        InputStreamReader ir = new InputStreamReader(System.in);
-        BufferedReader in = new BufferedReader(ir);
-        System.out.print("Enter your text here : ");
+        int x;
+        System.out.print("Enter String :");
         try{
-            s = in.readLine();
-            System.out.println("Your text is "+s);
+            s=in.readLine();
+            x=Integer.parseInt(in.readLine());
+            System.out.print(s+""+x);
+
         }catch(IOException e){
-            System.out.println("Read input keyboard error");
+            System.out.print("Read Input Keyboard Error");
         }
+        // Scanner in = new Scanner(System.in);
+        // String s;
+        // int x;
+        // s=in.nextLine();
+        // x=in.nextInt();
+        // System.out.print(s+""+x);
+        // in.close();
     }
 }
